@@ -65,7 +65,7 @@ function criaPedido(nomeCliente, corteId, barbaId) {
 }
 
 function atualizarServico(lista, id, valor, tipo) {
-    for(i=0; i< barbearia.cortes.length; i++){
+    for(let i=0; i< barbearia.cortes.length; i++){
         if(barbearia.cortes[i].id === id){
             barbearia.cortes[i] = lista[i];
             barbearia.cortes[i].valor = valor;
@@ -76,6 +76,6 @@ function atualizarServico(lista, id, valor, tipo) {
 }
 
 function calculaTotal(pedido) {
-    total = pedido.pedidoCortePreco+pedido.pedidoBarbaPreco;
+    let total = pedido.pedidoCortePreco+pedido.pedidoBarbaPreco;
     return total;
 }
